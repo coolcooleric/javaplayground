@@ -1,0 +1,12 @@
+ <booklist>
+   <book author="Frank Herbert" title="Dune"/>
+   <book author="Roberto Quaglia" title="dsfsdsdf"/>
+   <book author="Kate Wilhelm" title="Where Late the Sweet Bird Sang"/>
+   <book author="Anthony Burgess" title="A Clockwork Orange"/>
+   <book author="Frank Herbert" title="Dune" kk="shit"/>
+   <book author="Anthony Burgess" title="Earthly Powers"/>
+	 <book author="Isaak Asimov" title="Steel" kk="dkfsd" mm="pppp"/>
+   <book author="Isaak Asimov" title="The Foundation Trilogy"/>
+   <book author="Frank Herbert" title="Children of Dune"/>
+   <book author="Isaak Asimov" title="Steel"/>
+ </booklist>

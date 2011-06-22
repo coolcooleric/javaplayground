@@ -1,0 +1,458 @@
+<database>
+   <class name="DbStats" autoinc="yes"/>
+   <class name="SpcStats" autoinc="yes"/>
+   <class name="SpcNetworkElementStats" autoinc="yes"/>
+   <class name="NacStats" autoinc="yes"/>
+   <class name="PcmmCmtsAdaptorStats" autoinc="yes"/>
+   <class name="DqosCmtsAdaptorStats" autoinc="yes"/>
+   <class name="NetworkElementStats" autoinc="yes"/>
+   <class name="PcmmNetworkElementStats" autoinc="yes"/>
+   <class name="DqosNetworkElementStats" autoinc="yes"/>
+   <class name="GateStats" autoinc="yes"/>
+   <class name="PolicyServerStats" autoinc="yes"/>
+   <class name="ConnectedNetworkElementStats" autoinc="yes"/>
+   <class name="SubscriberUpdateStats" autoinc="yes"/>
+   <class name="TopologyUpdateStats" autoinc="yes"/>
+   <class name="MgpiAdaptorStats" autoinc="yes"/>
+   <class name="RadiusAdaptorStats" autoinc="yes"/>
+   <class name="RadiusNetworkElementStats" autoinc="yes"/>
+   <class name="RadiusAcctStats" autoinc="yes"/>
+   <class name="RadiusAcctNetworkElementStats" autoinc="yes"/>
+   <class name="DiameterAfAdaptorStats" autoinc="yes"/>
+   <class name="DiameterAfPeerStats" autoinc="yes">
+      <group value="1">
+         <pair value="1">
+            <field name="ConnectTime" type="string" required="no" group="1" pair="1" convert="1"/>
+         </pair>
+         <pair value="2">
+            <field name="DisconnectTime" type="string" required="no" group="1" pair="2" convert="1"/>
+         </pair>
+      </group>
+      <group value="2">
+         <pair value="1">
+            <field name="ConnectAddress" type="string" required="no" group="2" pair="1" sep="1"/>
+            <field name="ConnectPort" type="string" required="no" group="2" pair="1" sep="1"/>
+         </pair>
+      </group>
+      <group value="3">
+         <pair value="1">
+            <field name="MessagesInCount" type="long" required="no" group="3" pair="1"/>
+            <field name="MessagesOutCount" type="long" required="no" group="3" pair="1"/>
+         </pair>
+      </group>
+      <group value="4">
+         <pair value="1">
+            <field name="MessagesErrorInCount" type="long" required="no" group="4" pair="1"/>
+            <field name="MessagesErrorOutCount" type="long" required="no" group="4" pair="1"/>
+         </pair>
+      </group>
+      <group value="5">
+         <pair value="1">
+            <field name="AarMsgsReceived" type="long" required="no" group="5" pair="1"/>
+            <field name="AarMsgsSent" type="long" required="no" group="5" pair="1"/>
+         </pair>
+         <pair value="2">
+            <field name="AarInitMsgsReceived" type="long" required="no" group="5" pair="2"/>
+            <field name="AarInitMsgsSent" type="long" required="no" group="5" pair="2"/>
+         </pair>
+         <pair value="3">
+            <field name="AarModMsgsReceived" type="long" required="no" group="5" pair="3"/>
+            <field name="AarModMsgsSent" type="long" required="no" group="5" pair="3"/>
+         </pair>
+      </group>
+      <group value="8">
+         <pair value="1">
+            <field name="AaaRecvSuccessCount" type="long" required="no" group="8" pair="1"/>
+            <field name="AaaSendSuccessCount" type="long" required="no" group="8" pair="1"/>
+         </pair>
+         <pair value="2">
+            <field name="AaaRecvFailureCount" type="long" required="no" group="8" pair="2"/>
+            <field name="AaaSendFailureCount" type="long" required="no" group="8" pair="2"/>
+         </pair>
+      </group>
+      <group value="10">
+         <pair value="1">
+            <field name="AsrMsgsReceived" type="long" required="no" group="10" pair="1"/>
+            <field name="AsrMsgsSent" type="long" required="no" group="10" pair="1"/>
+         </pair>
+         <pair value="2">
+            <field name="AsaSuccessMsgsReceived" type="long" required="no" group="10" pair="2"/>
+            <field name="AsaSuccessMsgsSent" type="long" required="no" group="10" pair="2"/>
+         </pair>
+         <pair value="3">
+            <field name="AsaFailureMsgsReceived" type="long" required="no" group="10" pair="3"/>
+            <field name="AsaFailureMsgsSent" type="long" required="no" group="10" pair="3"/>
+         </pair>
+      </group>
+      <group value="14">
+         <pair value="1">
+            <field name="RarMsgsReceived" type="long" required="no" group="14" pair="1"/>
+            <field name="RarMsgsSent" type="long" required="no" group="14" pair="1"/>
+         </pair>
+         <pair value="2">
+            <field name="RaaSuccessMsgsReceived" type="long" required="no" group="14" pair="2"/>
+            <field name="RaaSuccessMsgsSent" type="long" required="no" group="14" pair="2"/>
+         </pair>
+         <pair value="3">
+            <field name="RaaFailureMsgsReceived" type="long" required="no" group="14" pair="3"/>
+            <field name="RaaFailureMsgsSent" type="long" required="no" group="14" pair="3"/>
+         </pair>
+      </group>
+      <group value="18">
+         <pair value="1">
+            <field name="StrMsgsReceived" type="long" required="no" group="18" pair="1"/>
+            <field name="StrMsgsSent" type="long" required="no" group="18" pair="1"/>
+         </pair>
+         <pair value="2">
+            <field name="StaRecvSuccessCount" type="long" required="no" group="18" pair="2"/>
+            <field name="StaSendSuccessCount" type="long" required="no" group="18" pair="2"/>
+         </pair>
+         <pair value="3">
+            <field name="StaRecvFailureCount" type="long" required="no" group="18" pair="3"/>
+            <field name="StaSendFailureCount" type="long" required="no" group="18" pair="3"/>
+         </pair>
+      </group>
+   </class>
+   <class name="DiameterPcefAdaptorStats" autoinc="yes">
+      <group value="1">
+         <pair value="1">
+            <field name="CurrentConnectionsCount" type="long" required="no" group="1" pair="1" convert="3"/>
+         </pair>
+      </group>
+      <group value="2">
+         <pair value="1">
+            <field name="PeerOkayCount" type="long" required="no" group="2" pair="1"/>
+         </pair>
+         <pair value="2">
+            <field name="PeerDownCount" type="long" required="no" group="2" pair="2"/>
+            <field name="PeerSuspectCount" type="long" required="no" group="2" pair="2"/>
+            <field name="PeerReopenCount" type="long" required="no" group="2" pair="2"/>
+         </pair>
+      </group>
+      <group value="3">
+         <pair value="1">
+            <field name="MessagesInCount" type="long" required="no" group="3" pair="1"/>
+            <field name="MessagesOutCount" type="long" required="no" group="3" pair="1"/>
+         </pair>
+      </group>
+      <group value="4">
+         <pair value="1">
+            <field name="CcrMsgsRecvCount" type="long" required="no" group="4" pair="1"/>
+            <field name="CcrMsgsSendCount" type="long" required="no" group="4" pair="1"/>
+         </pair>
+         <pair value="2">
+            <field name="CcaSuccessMsgsReceived" type="long" required="no" group="4" pair="2"/>
+            <field name="CcaSuccessMsgsSent" type="long" required="no" group="4" pair="2"/>
+         </pair>
+         <pair value="3">
+            <field name="CcaFailureMsgsReceived" type="long" required="no" group="4" pair="3"/>
+            <field name="CcaFailureMsgsSent" type="long" required="no" group="4" pair="3"/>
+         </pair>
+      </group>
+      <group value="5">
+         <pair value="1">
+            <field name="CcrIMsgsReceived" type="long" required="no" group="5" pair="1"/>
+            <field name="CcrIMsgsSent" type="long" required="no" group="5" pair="1"/>
+         </pair>
+         <pair value="2">
+            <field name="CcaISuccessMsgsReceived" type="long" required="no" group="5" pair="2"/>
+            <field name="CcaISuccessMsgsSent" type="long" required="no" group="5" pair="2"/>
+         </pair>
+         <pair value="3">
+            <field name="CcaIFailureMsgsReceived" type="long" required="no" group="5" pair="3"/>
+            <field name="CcaIFailureMsgsSent" type="long" required="no" group="5" pair="3"/>
+         </pair>
+      </group>
+      <group value="6">
+         <pair value="1">
+            <field name="CcrUMsgsReceived" type="long" required="no" group="6" pair="1"/>
+            <field name="CcrUMsgsSent" type="long" required="no" group="6" pair="1"/>
+         </pair>
+         <pair value="2">
+            <field name="CcaUSuccessMsgsReceived" type="long" required="no" group="6" pair="2"/>
+            <field name="CcaUSuccessMsgsSent" type="long" required="no" group="6" pair="2"/>
+         </pair>
+         <pair value="3">
+            <field name="CcaUFailureMsgsReceived" type="long" required="no" group="6" pair="3"/>
+            <field name="CcaUFailureMsgsSent" type="long" required="no" group="6" pair="3"/>
+         </pair>
+      </group>
+      <group value="7">
+         <pair value="1">
+            <field name="CcrTMsgsReceived" type="long" required="no" group="7" pair="1"/>
+            <field name="CcrTMsgsSent" type="long" required="no" group="7" pair="1"/>
+         </pair>
+         <pair value="2">
+            <field name="CcaTSuccessMsgsReceived" type="long" required="no" group="7" pair="2"/>
+            <field name="CcaTSuccessMsgsSent" type="long" required="no" group="7" pair="2"/>
+         </pair>
+         <pair value="3">
+            <field name="CcaTFailureMsgsReceived" type="long" required="no" group="7" pair="3"/>
+            <field name="CcaTFailureMsgsSent" type="long" required="no" group="7" pair="3"/>
+         </pair>
+      </group>
+      <group value="8">
+         <pair value="1">
+            <field name="RarMsgsReceived" type="long" required="no" group="8" pair="1"/>
+            <field name="RarMsgsSent" type="long" required="no" group="8" pair="1"/>
+         </pair>
+         <pair value="2">
+            <field name="RaaSuccessMsgsReceived" type="long" required="no" group="8" pair="2"/>
+            <field name="RaaSuccessMsgsSent" type="long" required="no" group="8" pair="2"/>
+         </pair>
+         <pair value="3">
+            <field name="RaaFailureMsgsReceived" type="long" required="no" group="8" pair="3"/>
+            <field name="RaaFailureMsgsSent" type="long" required="no" group="8" pair="3"/>
+         </pair>
+      </group>
+   </class>
+   <class name="DiameterPcefPeerStats" autoinc="yes">
+      <group value="1">
+         <pair value="1">
+            <field name="ConnectTime" type="string" required="no" group="1" pair="1" convert="1"/>
+         </pair>
+         <pair value="2">
+            <field name="DisconnectTime" type="string" required="no" group="1" pair="2" convert="1"/>
+         </pair>
+      </group>
+      <group value="20">
+         <pair value="1">
+            <field name="ConnectAddress" type="string" required="no" group="20" pair="1" sep="1"/>
+            <field name="ConnectPort" type="string" required="no" group="20" pair="1" sep="1"/>
+         </pair>
+      </group>
+      <group value="11">
+         <pair value="1">
+            <field name="MessagesInCount" type="long" required="no" delta="true" group="11" pair="1"/>
+            <field name="MessagesOutCount" type="long" required="no" delta="true" group="11" pair="1"/>
+         </pair>
+      </group>
+      <group value="12">
+         <pair value="1">
+            <field name="MessagesErrorInCount" type="long" required="no" delta="true" group="12" pair="1"/>
+            <field name="MessagesErrorOutCount" type="long" required="no" delta="true" group="12" pair="1"/>
+         </pair>
+      </group>
+      <group value="3">
+         <pair value="1">
+            <field name="MessagesInCount" type="long" required="no" group="3" pair="1"/>
+            <field name="MessagesOutCount" type="long" required="no" group="3" pair="1"/>
+         </pair>
+      </group>
+      <group value="4">
+         <pair value="1">
+            <field name="CcrMsgsRecvCount" type="long" required="no" group="4" pair="1"/>
+            <field name="CcrMsgsSendCount" type="long" required="no" group="4" pair="1"/>
+         </pair>
+         <pair value="2">
+            <field name="CcaSuccessMsgsReceived" type="long" required="no" group="4" pair="2"/>
+            <field name="CcaSuccessMsgsSent" type="long" required="no" group="4" pair="2"/>
+         </pair>
+         <pair value="3">
+            <field name="CcaFailureMsgsReceived" type="long" required="no" group="4" pair="3"/>
+            <field name="CcaFailureMsgsSent" type="long" required="no" group="4" pair="3"/>
+         </pair>
+      </group>
+      <group value="5">
+         <pair value="1">
+            <field name="CcrIMsgsReceived" type="long" required="no" group="5" pair="1"/>
+            <field name="CcrIMsgsSent" type="long" required="no" group="5" pair="1"/>
+         </pair>
+         <pair value="2">
+            <field name="CcaISuccessMsgsReceived" type="long" required="no" group="5" pair="2"/>
+            <field name="CcaISuccessMsgsSent" type="long" required="no" group="5" pair="2"/>
+         </pair>
+         <pair value="3">
+            <field name="CcaIFailureMsgsReceived" type="long" required="no" group="5" pair="3"/>
+            <field name="CcaIFailureMsgsSent" type="long" required="no" group="5" pair="3"/>
+         </pair>
+      </group>
+      <group value="6">
+         <pair value="1">
+            <field name="CcrUMsgsReceived" type="long" required="no" group="6" pair="1"/>
+            <field name="CcrUMsgsSent" type="long" required="no" group="6" pair="1"/>
+         </pair>
+         <pair value="2">
+            <field name="CcaUSuccessMsgsReceived" type="long" required="no" group="6" pair="2"/>
+            <field name="CcaUSuccessMsgsSent" type="long" required="no" group="6" pair="2"/>
+         </pair>
+         <pair value="3">
+            <field name="CcaUFailureMsgsReceived" type="long" required="no" group="6" pair="3"/>
+            <field name="CcaUFailureMsgsSent" type="long" required="no" group="6" pair="3"/>
+         </pair>
+      </group>
+      <group value="7">
+         <pair value="1">
+            <field name="CcrTMsgsReceived" type="long" required="no" group="7" pair="1"/>
+            <field name="CcrTMsgsSent" type="long" required="no" group="7" pair="1"/>
+         </pair>
+         <pair value="2">
+            <field name="CcaTSuccessMsgsReceived" type="long" required="no" group="7" pair="2"/>
+            <field name="CcaTSuccessMsgsSent" type="long" required="no" group="7" pair="2"/>
+         </pair>
+         <pair value="3">
+            <field name="CcaTFailureMsgsReceived" type="long" required="no" group="7" pair="3"/>
+            <field name="CcaTFailureMsgsSent" type="long" required="no" group="7" pair="3"/>
+         </pair>
+      </group>
+      <group value="8">
+         <pair value="1">
+            <field name="RarMsgsReceived" type="long" required="no" group="8" pair="1"/>
+            <field name="RarMsgsSent" type="long" required="no" group="8" pair="1"/>
+         </pair>
+         <pair value="2">
+            <field name="RaaSuccessMsgsReceived" type="long" required="no" group="8" pair="2"/>
+            <field name="RaaSuccessMsgsSent" type="long" required="no" group="8" pair="2"/>
+         </pair>
+         <pair value="3">
+            <field name="RaaFailureMsgsReceived" type="long" required="no" group="8" pair="3"/>
+            <field name="RaaFailureMsgsSent" type="long" required="no" group="8" pair="3"/>
+         </pair>
+      </group>
+   </class>
+   <class name="DiameterBberfAdaptorStats" autoinc="yes"/>
+   <class name="DiameterBberfPeerStats" autoinc="yes"/>
+   <class name="DiameterGxplusAdaptorStats" autoinc="yes"/>
+   <class name="DiameterGxplusPeerStats" autoinc="yes"/>
+   <class name="DiameterMraAfAdaptorStats" autoinc="yes"/>
+   <class name="DiameterMraAfPeerStats" autoinc="yes"/>
+   <class name="DiameterMraPcefAdaptorStats" autoinc="yes"/>
+   <class name="DiameterMraPcefPeerStats" autoinc="yes"/>
+   <class name="DiameterMraCtfAdaptorStats" autoinc="yes"/>
+   <class name="DiameterMraCtfPeerStats" autoinc="yes"/>
+   <class name="DiameterMraBberfAdaptorStats" autoinc="yes"/>
+   <class name="DiameterMraBberfPeerStats" autoinc="yes"/>
+   <class name="DiameterMraDrmaAdaptorStats" autoinc="yes"/>
+   <class name="DiameterMraDrmaPeerStats" autoinc="yes"/>
+   <class name="DiameterMraDraStats" autoinc="yes"/>
+   <class name="KpiMraStats" autoinc="yes"/>
+   <class name="IntervalMraStats" autoinc="yes"/>
+   <class name="DiameterShAdaptorStats" autoinc="yes"/>
+   <class name="DiameterShPeerStats" autoinc="yes"/>
+   <class name="DiameterCTFAdaptorStats" autoinc="yes">
+      <group value="1">
+         <pair value="1">
+            <field name="CurrentConnectionsCount" type="long" required="no" group="1" pair="1" convert="3"/>
+         </pair>
+      </group>
+      <group value="2">
+         <pair value="1">
+            <field name="PeerOkayCount" type="long" required="no" group="2" pair="1"/>
+         </pair>
+         <pair value="2">
+            <field name="PeerDownCount" type="long" required="no" group="2" pair="2"/>
+            <field name="PeerSuspectCount" type="long" required="no" group="2" pair="2"/>
+            <field name="PeerReopenCount" type="long" required="no" group="2" pair="2"/>
+         </pair>
+      </group>
+      <group value="3">
+         <pair value="1">
+            <field name="MessagesInCount" type="long" required="no" group="3" pair="1"/>
+            <field name="MessagesOutCount" type="long" required="no" group="3" pair="1"/>
+         </pair>
+      </group>
+      <group value="4">
+         <pair value="1">
+            <field name="CcrMsgsRecvCount" type="long" required="no" group="4" pair="1"/>
+            <field name="CcrMsgsSendCount" type="long" required="no" group="4" pair="1"/>
+         </pair>
+         <pair value="2">
+            <field name="CcaSuccessMsgsReceived" type="long" required="no" group="4" pair="2"/>
+            <field name="CcaSuccessMsgsSent" type="long" required="no" group="4" pair="2"/>
+         </pair>
+         <pair value="3">
+            <field name="CcaFailureMsgsReceived" type="long" required="no" group="4" pair="3"/>
+            <field name="CcaFailureMsgsSent" type="long" required="no" group="4" pair="3"/>
+         </pair>
+      </group>
+      <group value="5">
+         <pair value="1">
+            <field name="CcrIMsgsReceived" type="long" required="no" group="5" pair="1"/>
+            <field name="CcrIMsgsSent" type="long" required="no" group="5" pair="1"/>
+         </pair>
+         <pair value="2">
+            <field name="CcaISuccessMsgsReceived" type="long" required="no" group="5" pair="2"/>
+            <field name="CcaISuccessMsgsSent" type="long" required="no" group="5" pair="2"/>
+         </pair>
+         <pair value="3">
+            <field name="CcaIFailureMsgsReceived" type="long" required="no" group="5" pair="3"/>
+            <field name="CcaIFailureMsgsSent" type="long" required="no" group="5" pair="3"/>
+         </pair>
+      </group>
+      <group value="6">
+         <pair value="1">
+            <field name="CcrUMsgsReceived" type="long" required="no" group="6" pair="1"/>
+            <field name="CcrUMsgsSent" type="long" required="no" group="6" pair="1"/>
+         </pair>
+         <pair value="2">
+            <field name="CcaUSuccessMsgsReceived" type="long" required="no" group="6" pair="2"/>
+            <field name="CcaUSuccessMsgsSent" type="long" required="no" group="6" pair="2"/>
+         </pair>
+         <pair value="3">
+            <field name="CcaUFailureMsgsReceived" type="long" required="no" group="6" pair="3"/>
+            <field name="CcaUFailureMsgsSent" type="long" required="no" group="6" pair="3"/>
+         </pair>
+      </group>
+      <group value="7">
+         <pair value="1">
+            <field name="CcrTMsgsReceived" type="long" required="no" group="7" pair="1"/>
+            <field name="CcrTMsgsSent" type="long" required="no" group="7" pair="1"/>
+         </pair>
+         <pair value="2">
+            <field name="CcaTSuccessMsgsReceived" type="long" required="no" group="7" pair="2"/>
+            <field name="CcaTSuccessMsgsSent" type="long" required="no" group="7" pair="2"/>
+         </pair>
+         <pair value="3">
+            <field name="CcaTFailureMsgsReceived" type="long" required="no" group="7" pair="3"/>
+            <field name="CcaTFailureMsgsSent" type="long" required="no" group="7" pair="3"/>
+         </pair>
+      </group>
+      <group value="8">
+         <pair value="1">
+            <field name="RarMsgsReceived" type="long" required="no" group="8" pair="1"/>
+            <field name="RarMsgsSent" type="long" required="no" group="8" pair="1"/>
+         </pair>
+         <pair value="2">
+            <field name="RaaSuccessMsgsReceived" type="long" required="no" group="8" pair="2"/>
+            <field name="RaaSuccessMsgsSent" type="long" required="no" group="8" pair="2"/>
+         </pair>
+         <pair value="3">
+            <field name="RaaFailureMsgsReceived" type="long" required="no" group="8" pair="3"/>
+            <field name="RaaFailureMsgsSent" type="long" required="no" group="8" pair="3"/>
+         </pair>
+      </group>
+      <group value="9">
+         <pair value="3">
+            <field name="AsrMsgsReceived" type="long" required="no" group="9" pair="3"/>
+            <field name="AsrMsgsSent" type="long" required="no" group="9" pair="3"/>
+         </pair>
+         <pair value="1">
+            <field name="AsaSuccessMsgsReceived" type="long" required="no" group="9" pair="1"/>
+            <field name="AsaSuccessMsgsSent" type="long" required="no" group="9" pair="1"/>
+         </pair>
+         <pair value="2">
+            <field name="AsaFailureMsgsReceived" type="long" required="no" group="9" pair="2"/>
+            <field name="AsaFailureMsgsSent" type="long" required="no" group="9" pair="2"/>
+         </pair>
+      </group>
+      <group value="11">
+         <pair value="1">
+            <field name="ActiveSessionsCount" type="long" required="no" group="11" pair="1" convert="0"/>
+         </pair>
+         <pair value="2">
+            <field name="MaxActiveSessionsCount" type="long" required="no" group="11" pair="2" convert="0"/>
+         </pair>
+      </group>
+   </class>
+   <class name="DiameterCTFPeerStats" autoinc="yes"/>
+   <class name="KpiStats" autoinc="yes"/>
+   <class name="IntervalStats" autoinc="yes"/>
+   <class name="LdapDataSourceStats" autoinc="yes"/>
+   <class name="ShDataSourceStats" autoinc="yes"/>
+   <class name="DhcpDataSourceStats" autoinc="yes"/>
+   <class name="SprDataSourceStats" autoinc="yes"/>
+   <class name="ConnectionErrorStats" autoinc="yes"/>
+   <class name="ConnectionMraErrorStats" autoinc="yes"/>
+   <class name="ProtocolErrorStats" autoinc="yes"/>
+   <class name="ProtocolMraErrorStats" autoinc="yes"/>
+</database>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<database dbname="camiant" package="mi.mis" exportable="yes" comcol="yes">
+
+  <!-- Diameter AF Adaptor Stats -->
+  <class name="DiameterAfAdaptorStats" autoinc="yes">
+    <!-- The following fields idenitify the stats for query purposes -->
+    <field name="Timestamp" type="timestamp" required="yes" indexed="yes"/>
+    <field name="Rcuid" type="uid" required="yes"/>
+    <field name="Type" type="string" required="yes" indexed="yes"/>
+    <field name="Description" type="string" required="yes" /> 
+
+    <!-- The following are the specific Diameter stats for this objects. -->
+    <field name="PendingConnectionsCount" type="long" required="no" group="group1" pair="pair1"/>
+    <field name="CurrentConnectionsCount" type="long" required="no" group="group1" pair="pair1"/>
+    <field name="MessagesInCount" type="long" required="no" group="group1" pair="pair2"/>
+    <field name="MessagesOutCount" type="long" required="no" group="group1" pair="pair2"/>
+    <field name="MessagesOutCount" type="long" required="no" group="group1" pair="pair3"/>
+
+    <field name="AsrMsgsReceived" type="long" required="no" group="group2" pair="pair1"/>
+    <field name="AsrMsgsSent" type="long" required="no" group="group2" pair="pair1"/>
+    <field name="AsaSuccessMsgsReceived" type="long" required="no" group="group2" pair="pair2"/>
+    <field name="AsaSuccessMsgsSent" type="long" required="no" group="group2" pair="pair2"/>
+    <field name="AsaFailureMsgsReceived" type="long" required="no" group="group2" pair="none"/>
+    <field name="AsaFailureMsgsSent" type="long" required="no" group="group2" pair="none"/>
+
+    
+    <field name="AsaFailureMsgsSent" type="long" required="no"  pair="none"/>
+    
+  </class>
+
+    
+</database>

@@ -1,0 +1,40 @@
+
+
+	public void generate4DiameterAfAdaptorStats(HashMap statValues, ArrayList statNames){
+	  
+		addSingleStatForDisplay("PendingConnectionsCount", statValues, statNames, MiConstants.StatCounterConversionType.CONNECTIONS);
+				
+		addMultipleStatsForDisplay(new String[] {"MessagesInCount", "MessagesOutCount"}, statValues, statNames, MiConstants.DISPLAY_STATS_SEPARATOR);
+				
+		statsName.add("");
+		
+		addMultipleStatsForDisplay(new String[] {"AsrMsgsReceived", "AsrMsgsSent"}, statValues, statNames, MiConstants.DISPLAY_STATS_SEPARATOR);
+				
+		addMultipleStatsForDisplay(new String[] {"AsaSuccessMsgsReceived", "AsaSuccessMsgsSent"}, statValues, statNames, MiConstants.DISPLAY_STATS_SEPARATOR);
+				
+		addMultipleStatsForDisplay(new String[] {"AsaFailureMsgsReceived", "AsaFailureMsgsSent"}, statValues, statNames, MiConstants.DISPLAY_STATS_SEPARATOR);
+				
+		statsName.add("");
+		
+	}
+	
+
+
+	public void generate4DiameterAfAdaptorStats(HashMap statValues, ArrayList statNames){
+	  
+		addSingleStatForDisplay("PendingConnectionsCount", statValues, statNames, MiConstants.StatCounterConversionType.CONNECTIONS);
+				
+		addMultipleStatsForDisplay(new String[] {"MessagesInCount", "MessagesOutCount"}, statValues, statNames, MiConstants.DISPLAY_STATS_SEPARATOR);
+				
+		statsName.add("");
+		
+		addMultipleStatsForDisplay(new String[] {"AsrMsgsReceived", "AsrMsgsSent"}, statValues, statNames, MiConstants.DISPLAY_STATS_SEPARATOR);
+				
+		addMultipleStatsForDisplay(new String[] {"AsaSuccessMsgsReceived", "AsaSuccessMsgsSent"}, statValues, statNames, MiConstants.DISPLAY_STATS_SEPARATOR);
+				
+		addMultipleStatsForDisplay(new String[] {"AsaFailureMsgsReceived", "AsaFailureMsgsSent"}, statValues, statNames, MiConstants.DISPLAY_STATS_SEPARATOR);
+				
+		statsName.add("");
+		
+	}
+	
