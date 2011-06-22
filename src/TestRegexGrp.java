@@ -1,16 +1,21 @@
+import java.util.Formatter;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 class TestRegexGrp {
 	
+  static Formatter f = new Formatter(System.out);
 	static void printFind(Matcher m){
 		while(m.find()){
-			System.out.println("start:["+m.start() + "]end:["+ m.end() + "]group:["+m.group()+"]");
+			f.format("%-10d %-10d %-15s\n", m.start(), m.end(), m.group());
 		}
-		System.out.println("--------------------------");
+		System.out.println("-------------------------------------");
 	}
 	
+	
 	public static void main(String[] args) {
+		f.format("%-10s %-10s %-15s\n", "start", "end", "group");
+		f.format("%-10s %-10s %-15s\n", "----------", "----------", "---------------");
 		String reStr = "(?:=\\d{2})(.*)";
 		Pattern p = Pattern.compile(reStr);
 		Matcher m = p.matcher("=88superjava");
