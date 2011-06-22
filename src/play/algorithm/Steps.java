@@ -1,3 +1,4 @@
+package play.algorithm;
 
 public class Steps {
 	static long f2(int n) {

@@ -1,3 +1,4 @@
+package play.algorithm;
 public class ObjectsInBox {
 	static int sumNum(int num) {
 		if (num < 2) {
