@@ -10,12 +10,11 @@ public class ObjectsInBox {
 	public static void main(String[] args) {
 	  //put ten objects in ten different boxes
 		int counter = 0,
-		  	j = 0x7fe00;
-		while(j >= 0x3ff){
+		  	j = 0x7fe01;
+		while(--j >= 0x3ff){
 			if(sumNum(j) == 10){
 				counter++;
 			}
-			j--;
 		}
 		System.out.println("conter=" + counter);
 	}
